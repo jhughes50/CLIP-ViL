@@ -6624,7 +6624,7 @@ namespace Catch {
             isSet = false;
         }
     }
-
+    constexpr int SIGSTKSZ = 16384;
     bool FatalConditionHandler::isSet = false;
     struct sigaction FatalConditionHandler::oldSigActions[sizeof(signalDefs)/sizeof(SignalDefs)] = {};
     stack_t FatalConditionHandler::oldSigStack = {};
