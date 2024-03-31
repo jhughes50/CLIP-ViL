@@ -42,7 +42,7 @@ target_link_libraries(mattersim_main MatterSim)
 add_executable(random_agent src/driver/random_agent.cpp)
 target_link_libraries(random_agent MatterSim)
 
-add_subdirectory(pybind11)
+add_subdirectory(src/pybind11)
 
 find_package(PythonInterp 3.6 REQUIRED)
 message(${PYTHON_EXECUTABLE})
