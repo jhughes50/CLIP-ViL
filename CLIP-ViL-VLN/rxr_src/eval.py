@@ -3,6 +3,8 @@
 import json
 import os
 import sys
+import gzip 
+import json
 from collections import defaultdict
 import networkx as nx
 import numpy as np
@@ -168,10 +170,10 @@ class Evaluation(object):
 
 RESULT_DIR = '/home/vla-docker/CLIP-ViL/CLIP-ViL-VLN/tasks/RXR/results/'
 
-def eval_simple_agents():
+def eval_simple_agents(data):
     ''' Run simple baselines on each split. '''
     for split in ['train', 'val_seen', 'val_unseen', 'test']:
-        env = R2RBatch(None, batch_size=1, splits=[split])
+        env = R2RBatch(data, batch_size=1, splits=[split])
         ev = Evaluation([split])
 
         for agent_type in ['Stop', 'Shortest', 'Random']:
@@ -199,7 +201,15 @@ def eval_seq2seq():
 
 
 if __name__ == '__main__':
-    eval_simple_agents()
+    file_name = "/raid0/docker-raid/jasonah/VLA-Nav-Data/RxR/rxr_val_unseen_guide.json.gz"
+   
+    with gzip.open(file_name, 'r') as f:
+        json_bytes = f.read()
+
+    json_str = json_bytes.decode('utf-8')
+    data = json.loads(json_str)
+
+    eval_simple_agents(data)
 
 
 
