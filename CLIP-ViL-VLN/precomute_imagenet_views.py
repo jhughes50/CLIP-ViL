@@ -44,7 +44,7 @@ args = parser.parse_args()
 if args.arch == "resnet":
     FEATURE_SIZE = 1024
     MODEL = "RN50"
-    OUTFILE = 'img_features/CLIP-ResNet-50-views.tsv'
+    OUTFILE = '/raid0/docker-raid/jasonah/VLA-Nav-Data/img_features/CLIP-ResNet-50-views.tsv'
 elif args.arch == "vit":
     FEATURE_SIZE = 512
     MODEL = "ViT-B/32"
