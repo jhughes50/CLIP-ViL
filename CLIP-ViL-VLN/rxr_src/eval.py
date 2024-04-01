@@ -166,7 +166,7 @@ class Evaluation(object):
         return bleu_score, precisions
 
 
-RESULT_DIR = 'tasks/R2R/results/'
+RESULT_DIR = '/home/vla-docker/CLIP-ViL/CLIP-ViL-VLN/tasks/RXR/results/'
 
 def eval_simple_agents():
     ''' Run simple baselines on each split. '''
