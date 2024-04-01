@@ -2,7 +2,7 @@
 
 import sys
 sys.path.append('buildpy36')
-import MatterSim
+import MatterSimPython
 import csv
 import numpy as np
 import math
