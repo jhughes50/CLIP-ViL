@@ -106,7 +106,7 @@ args.TRAINVAL_VOCAB = 'tasks/R2R/data/trainval_vocab.txt'
 args.IMAGENET_FEATURES = '/home/vla-docker/data/VLA-Nav-Data/img_features/CLIP-ViT-B-32-views.tsv'
 args.CANDIDATE_FEATURES = '/home/vla-docker/data/VLA-Nav-Data/img_features/ResNet-152-candidate.tsv'
 args.features_fast = 'img_features/CLIP-ViT-B-32-views-fast.tsv'
-args.log_dir = '%s' % args.name
+args.log_dir = 'snap/%s' % args.name
 
 if not os.path.exists(args.log_dir):
     os.makedirs(args.log_dir)
