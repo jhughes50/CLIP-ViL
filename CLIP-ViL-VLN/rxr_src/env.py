@@ -1,7 +1,7 @@
 ''' Batched Room-to-Room navigation environment '''
 
 import sys
-sys.path.append('buildpy36')
+#sys.path.append('buildpy36')
 import MatterSim
 import csv
 import numpy as np
